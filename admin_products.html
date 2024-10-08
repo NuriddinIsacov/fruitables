@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Products</title>
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+
+  
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <div class="title">Fruitables</div>
+            <div class="products">
+              <i class="fa-regular fa-circle-dot"></i>
+              <a href="./admin_products.html">Products</a>
+            </div>
+        </div>
+    
+        <div class="adminka-box">
+            <div class="products-header">
+                <div class="products-title">Products</div>
+            </div>
+            <ul class="categories">
+                <li class="category">Vegetables <span class="category-btn" onclick="openCategory('vegetables')">Open</span></li>
+                <li class="category">Fruits<span class="category-btn" onclick="openCategory('fruits')">Open</span></li>
+                <li class="category">Breads<span class="category-btn" onclick="openCategory('breads')">Open</span></li>
+                <li class="category">Meats<span class="category-btn" onclick="openCategory('meats')">Open</span></li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>

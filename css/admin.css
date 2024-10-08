@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Raleway", sans-serif;
+}
+
+
+.container{
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.navigation{
+    height: 100vh;
+    display: inline-block;
+    background-color: rgb(129, 196, 8);
+}
+
+.title{
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+    font-weight: 800;
+}
+.products a{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+.products{
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px;
+    border: 1px solid #ffb524;
+    border-bottom: 1px solid #ffb524;
+    transition: 0.3s ease all;
+    text-align: center;
+}
+.products:hover{
+    background-color: #ffb524;
+    border: 1px solid #fff;
+}
+.products i{
+    color: #fff;
+    width: 10px;
+}
+
+/* Products styles */
+.adminka-box{
+    display: inline-block;
+
+}
+.products-header{
+    height: 40px;
+    width: 100%;
+    border-bottom: solid 2px #81c408;
+}
+.products-title{
+    color: #81c408;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+.categories{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 30px;
+}
+.category{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    border: 2px solid #81c408;
+    border-radius: 40px;
+    /* padding: 10px; */
+    padding-left: 10px;
+    color: #81c408;
+    font-size: 18px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+.category:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    transform: scale(1.03);
+}
+.category-btn{
+    height: 100%;
+    background-color: #81c408;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    border: 3px solid #81c408;
+    transition: all 0.3s ease;
+}
+.category-btn:hover{
+    background-color: #ffb524;
+    border: 3px solid #ffb524;
+}
+
+.category-btn:hover .category{
+    border: solid 1px #ffb524;
+}

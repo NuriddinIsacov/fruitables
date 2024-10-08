@@ -57,3 +57,34 @@ const register = () => {
     })
     
 };
+
+
+function parseJWT(token) {
+    // JWT uch qismdan iborat: header.payload.signature
+    // Bizga payload kerak, shuning uchun tokenni '.' bilan ajratamiz
+    const base64Url = token.split('.')[1];
+
+    // Base64'dan Base64URL'ga konvertatsiya
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    
+    // Base64 ni JSON'ga dekodlash
+    const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    // JSON ma'lumotini qaytarish
+    return JSON.parse(jsonPayload);
+}
+
+function logToken(){
+    const token = localStorage.getItem('fruitables_token');
+    console.log(parseJWT(token));
+
+    console.log("Tokenni decodelash");
+    
+    
+
+}
+
+logToken()
+
